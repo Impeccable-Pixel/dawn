@@ -58,6 +58,21 @@
           "type": "shopify:\/\/apps\/product-reviews\/blocks\/reviews\/bae150af-8da8-48b2-9867-398188115e5f",
           "settings": {
           }
+        },
+        "03dfdcd4-b24e-4886-9d91-82445f53a38c": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Collapsible tab",
+            "content": "",
+            "page": "{{ product.metafields.my_fields.shippingv2.value }}",
+            "icon": "box"
+          }
+        },
+        "1e3866f3-2627-4366-b2f2-eeb412367172": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": ""
+          }
         }
       },
       "block_order": [
@@ -70,7 +85,9 @@
         "buy_buttons",
         "description",
         "share",
-        "91117627-3c36-4e6a-a6ef-962a9b087972"
+        "91117627-3c36-4e6a-a6ef-962a9b087972",
+        "03dfdcd4-b24e-4886-9d91-82445f53a38c",
+        "1e3866f3-2627-4366-b2f2-eeb412367172"
       ],
       "settings": {
         "enable_sticky_info": true,
