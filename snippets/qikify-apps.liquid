@@ -1,0 +1,33 @@
+{% if content_for_header contains "mobilemenu" %}
+{% include 'qikify-mobilemenu' %}
+{% endif %}
+{% if content_for_header contains "slideshow" %}
+{% include 'qikify-slideshow' %}
+{% endif %}
+{% if content_for_header contains "tmenu" %}
+{% include 'qikify-tmenu' %}
+{% endif %}
+{% if content_for_header contains "salekit" %}
+{% include 'qikify-salekit' %}
+{% endif %}
+{% if content_for_header contains "stickycart" %}
+{% include 'qikify-stickycart' %}
+{% endif %}
+{% if content_for_header contains "contactform" %}
+{% include 'qikify-contactform' %}
+{% endif %}
+{% if content_for_header contains "quickview" %}
+{% include 'qikify-quickview' %}
+{% endif %}
+{% if content_for_header contains "smartbar" %}
+{% include 'qikify-smartbar' %}
+{% endif %}
+{% if content_for_header contains "tranzi" %}
+{% include 'qikify-tranzi' %}
+{% endif %}
+{% if content_for_header contains "boosterkit" %}
+{% include 'qikify-boosterkit' %}
+{% endif %}
+{% if content_for_header contains "tmenu" or content_for_header contains "mobilemenu" %}
+{% include 'qikify-navigator' %}
+{% endif %}
