@@ -43,7 +43,7 @@
 
             <tbody>
               {%- for item in cart.items -%}
-                <tr  data-hulkapps-lineitem class="cart-item" id="CartItem-{{ item.index | plus: 1 }}">
+                <tr class="cart-item" id="CartItem-{{ item.index | plus: 1 }}">
                   <td class="cart-item__media">
                     {% if item.image %}
                       <img class="cart-item__image"
@@ -107,8 +107,6 @@
                             </div>
                           {%- endif -%}
                         {%- endfor -%} 
-</span>
-<button type='button' style='display: none;' class='edit_cart_option btn btn--primary button' data-product_id='{{item.product_id}}' data-key='{{item.key}}' data-variant_id='{{item.variant_id}}' data-quantity='{{item.quantity}}'>Edit Options</button>
                       </dl>
 
                       <p class="product-option">{{ item.selling_plan_allocation.selling_plan.name }}</p>
@@ -143,13 +141,13 @@
                           </dt>
                           <dd>
                             <s class="cart-item__old-price price price--end">
-                              <span  data-hulkapps-line-price data-key='{{item.key}}' class='hulkapps-cart-item-price' data-key='{{item.key}}'><span class='hulkapps-cart-item-line-price' data-key='{{item.key}}'><span class='hulkapps-cart-item-line-price' data-key='{{item.key}}'>{{ item.original_line_price | money }}</span></span></span>
+                              <span class='hulkapps-cart-item-price' data-key='{{item.key}}'><span class='hulkapps-cart-item-line-price' data-key='{{item.key}}'><span class='hulkapps-cart-item-line-price' data-key='{{item.key}}'>{{ item.original_line_price | money }}</span></span></span>
                             </s>
                           </dd>
                           <dt class="visually-hidden">
                             {{ 'products.product.price.sale_price' | t }}
                           </dt>
-                          <dd  data-hulkapps-ci-price data-key='{{item.key}}' class="price price--end">
+                          <dd class="price price--end">
                             {{ item.final_price | money }}
                           </dd>
                         </dl>
@@ -168,7 +166,7 @@
                         {%- endif -%}
                       {%- else -%}
                         <span class="price price--end">
-                          <span  data-hulkapps-line-price data-key='{{item.key}}' class='hulkapps-cart-item-price' data-key='{{item.key}}'><span class='hulkapps-cart-item-line-price' data-key='{{item.key}}'><span class='hulkapps-cart-item-line-price' data-key='{{item.key}}'>{{ item.original_line_price | money }}</span></span></span>
+                          <span class='hulkapps-cart-item-price' data-key='{{item.key}}'><span class='hulkapps-cart-item-line-price' data-key='{{item.key}}'><span class='hulkapps-cart-item-line-price' data-key='{{item.key}}'>{{ item.original_line_price | money }}</span></span></span>
                         </span>
                       {%- endif -%}
                     </div>
@@ -215,12 +213,12 @@
                             {{ 'products.product.price.sale_price' | t }}
                           </dt>
                           <dd class="price price--end">
-                            <span  data-hulkapps-line-price data-key='{{item.key}}' class='hulkapps-cart-item-line-price' data-key='{{item.key}}'><span class='hulkapps-cart-item-line-price' data-key='{{item.key}}'>{{ item.final_line_price | money }}</span></span>
+                            <span class='hulkapps-cart-item-line-price' data-key='{{item.key}}'><span class='hulkapps-cart-item-line-price' data-key='{{item.key}}'>{{ item.final_line_price | money }}</span></span>
                           </dd>
                         </dl>
                       {%- else -%}
                         <span class="price price--end">
-                          <span  data-hulkapps-line-price data-key='{{item.key}}' class='hulkapps-cart-item-line-price' data-key='{{item.key}}'><span class='hulkapps-cart-item-line-price' data-key='{{item.key}}'>{{ item.original_line_price | money }}</span></span>
+                          <span class='hulkapps-cart-item-line-price' data-key='{{item.key}}'><span class='hulkapps-cart-item-line-price' data-key='{{item.key}}'>{{ item.original_line_price | money }}</span></span>
                         </span>
                       {%- endif -%}
                     </div>
